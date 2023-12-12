@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.IndexAiFragment"
+    android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--帮我搭配-->
+            <ImageButton
+                android:id="@+id/ib_bwdp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bwdp"
+                android:background="@color/white"
+                ></ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="帮我搭配"
+                android:layout_alignBottom="@id/ib_bwdp"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--社区消息-->
+            <ImageButton
+                android:id="@+id/ib_sqxx"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/sqxx"
+                android:background="@color/white"></ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="社区消息"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--扫描搭配-->
+            <ImageButton
+                android:id="@+id/ib_smdp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/smdp"
+                android:background="@color/white"></ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="扫描搭配"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--智能搭配-->
+            <ImageButton
+                android:id="@+id/ib_zndp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/zndp"
+                android:background="@color/white"></ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="智能搭配"
+                android:layout_alignBottom="@id/ib_zndp"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <!--商品搭配-->
+            <ImageButton
+                android:id="@+id/ib_spdp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/spdp"
+                android:background="@color/white"></ImageButton>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="商品搭配"
+                ></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/yuanjiao"></LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_index_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

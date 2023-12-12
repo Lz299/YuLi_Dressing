@@ -2,27 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="200dp"></ImageView>
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
 
     <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="350dp"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="90dp"
-            android:layout_marginBottom="20dp"></ImageView>
+            android:id="@+id/iv_bigimg"
+            android:layout_width="200dp"
+            android:layout_height="300dp"></ImageView>
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="200dp"
+            android:layout_height="40dp"></TextView>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="90dp"></ImageView>
 
     </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_list_list"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"></ListView>
 
 
 </LinearLayout>
