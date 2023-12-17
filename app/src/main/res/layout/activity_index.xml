@@ -70,14 +70,14 @@
             android:orientation="vertical"
             android:layout_weight="1">
         <!--帮我搭配-->
-        <ImageButton
-            android:id="@+id/ib_bwdp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/bwdp"
-            android:background="@color/white"
-           ></ImageButton>
-        <TextView
+
+            <ImageView
+                android:id="@+id/ib_bwdp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bwdp"></ImageView>
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:text="帮我搭配"
@@ -89,12 +89,12 @@
             android:orientation="vertical"
             android:layout_weight="1">
         <!--社区消息-->
-        <ImageButton
+        <ImageView
             android:id="@+id/ib_sqxx"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/sqxx"
-            android:background="@color/white"></ImageButton>
+           ></ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="20dp"
@@ -113,10 +113,11 @@
             android:layout_height="60dp"
             android:src="@drawable/smdp"
             android:background="@color/white"></ImageButton>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="扫描搭配"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫描搭配"></TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -136,34 +137,51 @@
             android:text="智能搭配"
             android:layout_alignBottom="@id/ib_zndp"></TextView>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-        <!--商品搭配-->
-        <ImageButton
-            android:id="@+id/ib_spdp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/spdp"
-            android:background="@color/white"></ImageButton>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="商品搭配"
-           ></TextView>
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--商品搭配-->
+            <ImageButton
+                android:id="@+id/ib_spdp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:src="@drawable/spdp"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="商品搭配"></TextView>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="75dp"
         android:layout_margin="10dp"
         android:background="@drawable/yuanjiao"></LinearLayout>
 
     <ListView
+        android:id="@+id/lv_showitem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" ></ListView>
+        android:layout_height="446dp"></ListView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/add1"></ImageView>
+
 
 </LinearLayout>
