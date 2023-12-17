@@ -24,35 +24,26 @@
             ></ImageView>
 
         <EditText
-            android:id="@+id/login_usersPhone"
+            android:id="@+id/login_username"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:padding="10dp"
-            android:hint="请输入手机号"
+            android:hint="请输入用户名"
             android:textColor="@color/black"
             android:background="@drawable/showshape"></EditText>
         <EditText
-            android:id="@+id/login_usersYanzhen"
+            android:id="@+id/login_pwd"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:inputType="textPassword"
-            android:hint="请输入验证码"
+            android:hint="请输入密码"
             android:textColor="@color/black"
             android:background="@drawable/showshape">
         </EditText>
-        <android.widget.Button
-            android:id="@+id/btn_yzmButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:text="获取验证码"
-            android:layout_marginTop="-55dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="90dp"
-            tools:ignore="TouchTargetSizeCheck" />
+
         <android.widget.Button
             android:id="@+id/btn_login"
             android:layout_width="300dp"
@@ -72,6 +63,7 @@
             android:layout_marginBottom="10dp"
             android:text="注册"></android.widget.Button>
 
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,12 +73,12 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/imguserpwd2"></ImageView>
+                android:src="@drawable/imgphone2"></ImageView>
             <TextView
-                android:id="@+id/login_zhanghaoButton"
+                android:id="@+id/login_phoneButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="账号密码方式登录"
+                android:text="手机号方式登录"
                 android:textSize="16dp"
                 ></TextView>
 
