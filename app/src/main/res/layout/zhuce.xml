@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入手机号:   "
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"></TextView>
+
+        <EditText
+            android:id="@+id/editText_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_password"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/showshape"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:paddingLeft="10dp"
+            android:ems="10" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入用户名:   "
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"></TextView>
+
+        <EditText
+            android:id="@+id/editText_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_password"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/showshape"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="14dp"
+            android:ems="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入密码:        "
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"></TextView>
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_username"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/showshape"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="14dp"
+            android:ems="10" ></EditText>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请再次输入密码:"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"></TextView>
+
+        <EditText
+            android:id="@+id/editText_password2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_username"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/showshape"
+            android:textColor="@color/black"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="14dp"
+            android:ems="10" ></EditText>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

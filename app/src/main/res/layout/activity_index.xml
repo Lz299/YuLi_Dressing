@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IndexActivity"
     android:orientation="vertical">
+
     <RelativeLayout
-        android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentTop="true"
         >
+
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_centerVertical="true"
@@ -28,24 +28,22 @@
             android:orientation="horizontal"
             android:layout_centerInParent="true"
             >
-            <TextView
-                android:id="@+id/tv_ai"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:text="AI小搭"
-                android:textSize="18dp"
-                ></TextView>
-            <TextView
-                android:id="@+id/tv_fx"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:text="发现"
-                android:textSize="18dp"
-                android:textColor="#C8C4C4"
-                ></TextView>
-        </LinearLayout>
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="AI小搭"
+            android:textSize="18dp"
+            ></TextView>
+        <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="发现"
+        android:textSize="18dp"
+            android:textColor="#C8C4C4"
+        ></TextView>
+</LinearLayout>
         <ImageButton
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -58,17 +56,132 @@
     </RelativeLayout>
 
 
-    <FrameLayout
-        android:id="@+id/fl_fragment1"
-        android:layout_width="wrap_content"
-        android:layout_alignBottom="@id/rl"
-        android:layout_height="wrap_content"></FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <!--帮我搭配-->
+
+            <ImageView
+                android:id="@+id/ib_bwdp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bwdp"></ImageView>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="帮我搭配"
+            android:layout_alignBottom="@id/ib_bwdp"></TextView>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <!--社区消息-->
+        <ImageView
+            android:id="@+id/ib_sqxx"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sqxx"
+           ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="社区消息"
+            ></TextView>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <!--扫描搭配-->
+        <ImageButton
+            android:id="@+id/ib_smdp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/smdp"
+            android:background="@color/white"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫描搭配"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <!--智能搭配-->
+        <ImageButton
+            android:id="@+id/ib_zndp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/zndp"
+            android:background="@color/white"></ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="智能搭配"
+            android:layout_alignBottom="@id/ib_zndp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--商品搭配-->
+            <ImageButton
+                android:id="@+id/ib_spdp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:src="@drawable/spdp"></ImageButton>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="商品搭配"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/yuanjiao"></LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_showitem"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"></ListView>
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        ></RelativeLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/add1"></ImageView>
 
 
-</RelativeLayout>
+</LinearLayout>
