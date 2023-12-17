@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView login_zhanghaoButton= findViewById(R.id.login_zhanghaoButton);
+        login_zhanghaoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
@@ -52,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mDialog.getWindow().setBackgroundDrawableResource(android.R.color.white); // 修改这里
         builder.setView(view);
 
-        builder.setPositiveButton("登录", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 EditText et_phone = (EditText) view.findViewById(R.id.editText_phone);
