@@ -29,6 +29,7 @@ public class MyselfActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myself);
         init();
+
         //返回上一页
         ImageView user_iv_bankButton = findViewById(R.id.user_iv_bankButton);
         user_iv_bankButton.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +49,6 @@ public class MyselfActivity extends AppCompatActivity {
         MyselfAdapter adapter = new MyselfAdapter(getData(),this);
         LinearLayoutManager layoutManager =  new LinearLayoutManager(this);
         show_RecyclerView.setLayoutManager(new GridLayoutManager(this,2));
-
         show_RecyclerView.setAdapter(adapter);
     }
     private List<Map<String,Object>> getData(){

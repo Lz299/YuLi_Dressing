@@ -51,7 +51,8 @@ public class UploadActivity extends AppCompatActivity {
         btn_main_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(UploadActivity.this, PostActivity.class);
+                startActivity(intent);
             }
         });
 

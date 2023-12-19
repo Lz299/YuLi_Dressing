@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -42,7 +43,33 @@ public class IndexActivity extends AppCompatActivity {
             }
         });
 
+        //底部按钮跳转主页，社区，衣柜，我的
+        LinearLayout index_indexButton = findViewById(R.id.index_indexButton);
+        index_indexButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(IndexActivity.this, PersonalActivity.class);
+//                startActivity(intent);
+            }
+        });
 
+        LinearLayout index_shequButton = findViewById(R.id.index_shequButton);
+        index_shequButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IndexActivity.this, CommunityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout index_yiguiButton = findViewById(R.id.index_yiguiButton);
+        index_yiguiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IndexActivity.this, PersonalActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     private List<Map<String,Object>> getData() {

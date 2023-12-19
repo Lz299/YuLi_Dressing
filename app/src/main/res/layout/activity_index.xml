@@ -5,20 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IndexActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         >
 
-        <ImageButton
+        <ImageView
             android:id="@+id/imageButton"
             android:layout_centerVertical="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ss"
-            android:background="@color/white"
             android:layout_marginLeft="5dp"
             android:layout_alignParentLeft="true"/>
 
@@ -33,6 +34,7 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:text="AI小搭"
+            android:textColor="@color/white"
             android:textSize="18dp"
             ></TextView>
         <TextView
@@ -41,147 +43,153 @@
         android:gravity="center"
         android:text="发现"
         android:textSize="18dp"
-            android:textColor="#C8C4C4"
+            android:textColor="#4C2B6E"
         ></TextView>
 </LinearLayout>
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/xx"
             android:layout_centerVertical="true"
             android:layout_marginRight="5dp"
-            android:background="@color/white"
             android:layout_alignParentRight="true"
-            ></ImageButton>
+            ></ImageView>
     </RelativeLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-
+    <androidx.cardview.widget.CardView
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center_horizontal"
         >
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-        <!--帮我搭配-->
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"></LinearLayout>
 
-            <ImageView
-                android:id="@+id/ib_bwdp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/bwdp"></ImageView>
+    </androidx.cardview.widget.CardView>
 
-            <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="帮我搭配"
-            android:layout_alignBottom="@id/ib_bwdp"></TextView>
-    </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-        <!--社区消息-->
-        <ImageView
-            android:id="@+id/ib_sqxx"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/sqxx"
-           ></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="社区消息"
-            ></TextView>
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-        <!--扫描搭配-->
-        <ImageButton
-            android:id="@+id/ib_smdp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/smdp"
-            android:background="@color/white"></ImageButton>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="扫描搭配"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-        <!--智能搭配-->
-        <ImageButton
-            android:id="@+id/ib_zndp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/zndp"
-            android:background="@color/white"></ImageButton>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="智能搭配"
-            android:layout_alignBottom="@id/ib_zndp"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <!--商品搭配-->
-            <ImageButton
-                android:id="@+id/ib_spdp"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@color/white"
-                android:src="@drawable/spdp"></ImageButton>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="商品搭配"></TextView>
-        </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_margin="10dp"
-        android:background="@drawable/yuanjiao"></LinearLayout>
+        android:background="@color/white"></LinearLayout>
 
-    <ListView
-        android:id="@+id/lv_showitem"
-        android:layout_width="match_parent"
-        android:layout_height="446dp"></ListView>
-
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
-    </RelativeLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.5"
+        app:cardCornerRadius="30dp">
+
+        <ListView
+            android:id="@+id/lv_showitem"
+            android:layout_width="410dp"
+            android:layout_height="470dp"></ListView>
+
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/iv_addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
         android:src="@drawable/add1"></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-30dp"
+        >
+        <LinearLayout
+            android:id="@+id/index_indexButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/aninfo"
+                android:layout_gravity="center_horizontal"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="首页"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_shequButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="110dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/anshequ"
+                android:layout_gravity="center_horizontal"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="社区"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_yiguiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/anyigui"
+                android:layout_gravity="center_horizontal"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="衣柜"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/index_wodeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/anmy"
+                android:layout_gravity="center_horizontal"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="我的"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

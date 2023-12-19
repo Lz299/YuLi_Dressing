@@ -45,9 +45,6 @@ public class MyselfAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.itemShowtx.setImageResource((int) map.get("itemTouxiang"));
         holder.itemname.setText(map.get("itemName").toString());
         holder.itemlike.setText(map.get("itemLike").toString());
-
-
-
     }
 
     @Override
@@ -60,6 +57,7 @@ public class MyselfAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 class ViewHolder extends RecyclerView.ViewHolder{
     ImageView itemShowImg,itemShowtx;
+
     TextView itemtitle,itemname,itemlike;
 
     public ViewHolder(@NonNull View itemView) {
@@ -69,7 +67,6 @@ class ViewHolder extends RecyclerView.ViewHolder{
         itemShowtx = itemView.findViewById(R.id.show_iv_touxiang);
         itemname = itemView.findViewById(R.id.show_tv_name);
         itemlike = itemView.findViewById(R.id.show_like);
-
 
     }
 }

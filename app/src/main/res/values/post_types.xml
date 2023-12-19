@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="post_types">
+        <item>推荐</item>
+        <item>配饰</item>
+        <item>发型</item>
+        <item>鞋子</item>
+        <item>围巾</item>
+        <item>提包</item>
+        <item>种草</item>
+    </string-array>
+</resources>
