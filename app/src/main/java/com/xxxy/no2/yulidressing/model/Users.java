@@ -5,17 +5,13 @@ public class Users {
     private String username;
     private String password;
     private String phone;
+    private String users_img;
 
 
     public Users() {
     }
 
-    public Users(int users_id, String username, String password, String phone) {
-        this.users_id = users_id;
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
-    }
+
 
     public int getUsers_id() {
         return users_id;
@@ -49,14 +45,22 @@ public class Users {
         this.phone = phone;
     }
 
+    public String getUsers_img() {
+        return users_img;
+    }
+
+    public void setUsers_img(String users_img) {
+        this.users_img = users_img;
+    }
 
     @Override
     public String toString() {
-        return "User{" +
-                "user_id=" + users_id +
+        return "Users{" +
+                "users_id=" + users_id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", phone='" + phone + '\'' +
+                ", users_img='" + users_img + '\'' +
                 '}';
     }
 }
