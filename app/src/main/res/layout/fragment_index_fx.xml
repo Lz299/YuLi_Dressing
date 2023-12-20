@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.IndexFxFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_tj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#2196F3"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配饰"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_sy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上衣"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_xy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下衣"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_xz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="鞋子"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+        <TextView
+            android:id="@+id/tv_bb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="包包"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+        <TextView
+            android:id="@+id/tv_mz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帽子"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"></TextView>
+    </LinearLayout>
+
+
+    <GridView
+        android:id="@+id/gv_fx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:scrollbars="none"></GridView>
+
+</LinearLayout>
