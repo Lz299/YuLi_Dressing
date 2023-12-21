@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/index_fm_btn"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="主页"/>
+
+    <item android:title=" "></item>
+<!--            android:icon="@drawable/add1"-->
+        />
+
+    <item
+        android:id="@+id/comm_fm_btn"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="社区"/>
+
+
+
+</menu>

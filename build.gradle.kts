@@ -2,3 +2,11 @@
 plugins {
     id("com.android.application") version "8.1.1" apply false
 }
+allprojects {
+    repositories {
+
+        //build.gradle 的Project下导入
+        maven { url= uri("https://jitpack.io") }
+    }
+}
+

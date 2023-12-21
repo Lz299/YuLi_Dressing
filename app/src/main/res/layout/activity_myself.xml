@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/user_iv_bankButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="10dp"
             android:src="@drawable/backbutton"></ImageView>
         <TextView
@@ -27,8 +27,8 @@
             android:id="@+id/iv_otherButton"
             android:src="@drawable/other"
             android:layout_margin="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp"></ImageView>
+            android:layout_width="30dp"
+            android:layout_height="30dp"></ImageView>
     </LinearLayout>
 
     <LinearLayout
@@ -80,46 +80,21 @@
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
         >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/user_tv_usersFans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:gravity="center_horizontal"
-                android:text="0"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:textSize="12dp"
-                android:textColor="#787878"
-                android:text="粉丝"></TextView>
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/user_tv_usersConcern"
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="0"></TextView>
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:textColor="#787878"
-                android:text="关注"></TextView>
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+         <ImageView
+             android:layout_marginTop="10dp"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:src="@drawable/likeimg"
+             ></ImageView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -149,11 +124,8 @@
         android:id="@+id/show_RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="2.5dp"
-        android:layout_weight="1"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
-        >
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

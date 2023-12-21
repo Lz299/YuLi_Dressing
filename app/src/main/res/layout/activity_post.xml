@@ -59,7 +59,7 @@
 
     <EditText
         android:layout_gravity="center_horizontal"
-        android:layout_width="390dp"
+        android:layout_width="370dp"
         android:hint="请输入标题"
         android:layout_marginBottom="20dp"
         android:background="@android:drawable/edit_text"
@@ -69,7 +69,7 @@
     <EditText
         android:id="@+id/add_content"
         android:layout_gravity="center_horizontal"
-        android:layout_width="390dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:enabled="true"
         android:gravity="top"

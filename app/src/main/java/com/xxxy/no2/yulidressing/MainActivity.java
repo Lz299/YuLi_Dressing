@@ -1,9 +1,5 @@
 package com.xxxy.no2.yulidressing;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import com.xxxy.no2.yulidressing.utils.RemoveUtils;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,18 +14,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import com.xxxy.no2.yulidressing.model.Users;
-
 import com.xxxy.no2.yulidressing.utils.Constant;
 import com.xxxy.no2.yulidressing.utils.SharedPreferencesUtils;
-import com.xxxy.no2.yulidressing.utils.TimeCount;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -462,5 +458,4 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         });
 
     }
-
 }

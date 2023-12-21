@@ -76,6 +76,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
             >
@@ -89,12 +90,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="账号密码方式登录"
+                android:layout_marginLeft="10dp"
                 android:textSize="16dp"
                 ></TextView>
 
 
         </LinearLayout>
-
 
     </LinearLayout>
 </LinearLayout>

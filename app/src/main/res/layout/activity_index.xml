@@ -1,195 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IndexActivity"
     android:orientation="vertical"
-    android:background="@drawable/background"
-    >
+    tools:context=".IndexActivity">
 
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/fragment_zhuye"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        >
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        ></FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv_Bottonview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu">
 
         <ImageView
-            android:id="@+id/imageButton"
-            android:layout_centerVertical="true"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ss"
-            android:layout_marginLeft="5dp"
-            android:layout_alignParentLeft="true"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true"
-            >
-        <TextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:text="AI小搭"
-            android:textColor="@color/white"
-            android:textSize="18dp"
-            ></TextView>
-        <TextView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="发现"
-        android:textSize="18dp"
-            android:textColor="#4C2B6E"
-        ></TextView>
-</LinearLayout>
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/xx"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dp"
-            android:layout_alignParentRight="true"
-            ></ImageView>
-    </RelativeLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="410dp"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center_horizontal"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_margin="10dp"
-            android:background="@color/white"></LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_margin="10dp"
-        android:background="@color/white"></LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.5"
-        app:cardCornerRadius="30dp">
-
-        <ListView
-            android:id="@+id/lv_showitem"
-            android:layout_width="410dp"
-            android:layout_height="470dp"></ListView>
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/iv_addButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/add1"></ImageView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="-30dp"
-        >
-        <LinearLayout
-            android:id="@+id/index_indexButton"
+            android:id="@+id/iv_addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/aninfo"
-                android:layout_gravity="center_horizontal"
-                ></ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="首页"
-                android:textSize="12dp"></TextView>
-        </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/add1"></ImageView>
 
-        <LinearLayout
-            android:id="@+id/index_shequButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginRight="110dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/anshequ"
-                android:layout_gravity="center_horizontal"
-                ></ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="社区"
-                android:textSize="12dp"></TextView>
-        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <LinearLayout
-            android:id="@+id/index_yiguiButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/anyigui"
-                android:layout_gravity="center_horizontal"
-                ></ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="衣柜"
-                android:textSize="12dp"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/index_wodeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            >
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/anmy"
-                android:layout_gravity="center_horizontal"
-                ></ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="我的"
-                android:textSize="12dp"></TextView>
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

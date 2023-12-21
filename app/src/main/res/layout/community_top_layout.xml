@@ -7,7 +7,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:padding="10dp"
         >
         <TextView
             android:id="@+id/tv_comm_tj"
@@ -24,12 +25,12 @@
             android:gravity="center_horizontal"
             android:text="配饰"></TextView>
         <TextView
-            android:id="@+id/tv_comm_wj"
+            android:id="@+id/tv_comm_dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="围巾"></TextView>
+            android:text="搭配"></TextView>
         <TextView
             android:id="@+id/tv_comm_fx"
             android:layout_width="wrap_content"

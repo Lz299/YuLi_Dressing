@@ -1,14 +1,21 @@
 package com.xxxy.no2.yulidressing;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.xxxy.no2.yulidressing.Fragment.CommunityFragment;
+import com.xxxy.no2.yulidressing.Fragment.IndexFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,76 +23,78 @@ import java.util.List;
 import java.util.Map;
 
 public class IndexActivity extends AppCompatActivity {
-    private int[] imgs_index_show = new int[]{R.drawable.show2,R.drawable.show1};
-    private int[] imgs_index_item1 = new int[]{R.drawable.clothes1,R.drawable.clothes1};
-    private int[] imgs_index_item2 = new int[]{R.drawable.clothes2,R.drawable.clothes2};
-    private int[] imgs_index_item3 = new int[]{R.drawable.clothes3,R.drawable.clothes3};
-    private int[] imgs_index_item4 = new int[]{R.drawable.clothes4,R.drawable.clothes4};
 
+    private IndexFragment indexFragment;
+    private CommunityFragment communityFragment;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
-        //显示主页的穿搭搭配模块
-        ListView showitem = findViewById(R.id.lv_showitem);
-        SimpleAdapter simpleAdapter = new SimpleAdapter(IndexActivity.this,getData(),R.layout.indexitem,
-                new String[]{"im_show","im_item1","im_item2","im_item3","im_item4"},new int[]{R.id.iv_show,R.id.imageView1,R.id.imageView2,R.id.imageView3,R.id.imageView4});
-        showitem.setAdapter(simpleAdapter);
 
         //点击加号跳加号页面
-        ImageView  iv_addButton= findViewById(R.id.iv_addButton);
+        ImageView iv_addButton = findViewById(R.id.iv_addButton);
         iv_addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(IndexActivity.this, UploadActivity.class);
+                Intent intent = new Intent(IndexActivity.this, MorepagesActivity.class);
                 startActivity(intent);
             }
         });
 
-        //底部按钮跳转主页，社区，衣柜，我的
-        LinearLayout index_indexButton = findViewById(R.id.index_indexButton);
-        index_indexButton.setOnClickListener(new View.OnClickListener() {
+        //导航栏控件使用
+        bottomNavigationView = findViewById(R.id.bnv_Bottonview);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(IndexActivity.this, PersonalActivity.class);
-//                startActivity(intent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId()==R.id.index_fm_btn){
+                    selectedFragment(0);
+                }else if (item.getItemId()==R.id.comm_fm_btn){
+                    selectedFragment(1);
+                }
+
+                return true;
             }
         });
-
-        LinearLayout index_shequButton = findViewById(R.id.index_shequButton);
-        index_shequButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(IndexActivity.this, CommunityActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        LinearLayout index_yiguiButton = findViewById(R.id.index_yiguiButton);
-        index_yiguiButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(IndexActivity.this, PersonalActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        //默认选中实现方法
+        selectedFragment(0);
     }
-    private List<Map<String,Object>> getData() {
-        List<Map<String,Object>> listItems = new ArrayList<Map<String,Object>>();
-        //把三个数组变成List《map《》》
-        for(int i = 0;i<imgs_index_show.length;i++){
-            Map<String,Object> map = new HashMap<String,Object>();
-            map.put("im_show",imgs_index_show[i]);
-            map.put("im_item1",imgs_index_item1[i]);
-            map.put("im_item2",imgs_index_item2[i]);
-            map.put("im_item3",imgs_index_item3[i]);
-            map.put("im_item4",imgs_index_item4[i]);
 
-            listItems.add(map);
+
+    //默认选中实现方法
+    private void selectedFragment(int position){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        hideFragment(fragmentTransaction);
+        //这里已经选中给页面默认
+        if (position==0){
+            if (indexFragment == null){
+                indexFragment = new IndexFragment();
+                fragmentTransaction.add(R.id.fragment_zhuye,indexFragment);
+            }else {
+                fragmentTransaction.show(indexFragment);
+            }
+        } else if (position == 1){
+            if (communityFragment==null){
+                communityFragment = new CommunityFragment();
+                fragmentTransaction.add(R.id.fragment_zhuye,communityFragment);
+            }else {
+                fragmentTransaction.show(communityFragment);
+            }
         }
-        return listItems;
+
+        //一定要提交
+        fragmentTransaction.commit();
+    }
+
+    //点击隐藏其他Fragmen
+    private void hideFragment(FragmentTransaction fragmentTransaction){
+        if (indexFragment!=null){
+            fragmentTransaction.hide(indexFragment);
+        }
+        if (communityFragment!=null){
+            fragmentTransaction.hide(communityFragment);
+        }
     }
 
 }
