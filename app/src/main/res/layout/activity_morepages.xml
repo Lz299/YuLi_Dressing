@@ -179,7 +179,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/white"
-            android:text="个人主页"
+            android:text="个人衣库"
             android:textColor="#2c2c2c"
             android:textSize="16dp"
             android:textStyle="bold"></TextView>
@@ -216,7 +216,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/white"
-            android:text="帮搭搭"
+            android:text="个人主页"
             android:textColor="#2c2c2c"
             android:textSize="16dp"
             android:textStyle="bold"></TextView>
@@ -229,7 +229,7 @@
             android:layout_marginTop="6dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
-            android:text="好友穿搭建议"></TextView>
+            android:text="个人发帖获赞"></TextView>
     </RelativeLayout>
 
     <ImageView

@@ -83,8 +83,6 @@ public class CommunityFragment extends Fragment {
                 .addBannerLifecycleObserver(this)
                 .setIndicator(new CircleIndicator(getContext()));
 
-
-
         //**标签栏Fragment事件
         setData();
         init();
@@ -97,7 +95,7 @@ public class CommunityFragment extends Fragment {
 
     //初始化topFragment，拿到top的两个fragment按钮
     private void init() {
-        fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager = getChildFragmentManager();
         topFragment = (TopFragment) fragmentManager.findFragmentById(R.id.fragment_top);
         tv_comm_tj = topFragment.getView().findViewById(R.id.tv_comm_tj);
         tv_comm_ps = topFragment.getView().findViewById(R.id.tv_comm_ps);
@@ -132,11 +130,11 @@ public class CommunityFragment extends Fragment {
 
     private void clickEvent() {
         //初始页面给的数据是 kiy为 1 map
-        switchData(map.get("1"));
+     //   switchData(map.get("1"));
         tv_comm_tj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchData(map.get("1"));
+       //         switchData(map.get("1"));
                 //给点击的按钮设置颜色样式
                 tv_comm_tj.setBackgroundColor(Color.BLUE);
                 tv_comm_ps.setBackgroundColor(Color.WHITE);
@@ -150,7 +148,7 @@ public class CommunityFragment extends Fragment {
         tv_comm_ps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchData(map.get("2"));
+             //   switchData(map.get("2"));
                 ////给点击的按钮设置颜色样式
                 tv_comm_tj.setBackgroundColor(Color.WHITE);
                 tv_comm_ps.setBackgroundColor(Color.BLUE);
@@ -159,11 +157,11 @@ public class CommunityFragment extends Fragment {
 
     }
 
-    private void switchData(List<PostBean> list){
-        fragmentManager = getActivity().getSupportFragmentManager();
+    private void switchData(List<Map<String,Object>> list){
+        fragmentManager = getChildFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         //getInstance写在MainFragment内
-    //    mainFragment= new MainFragment().getInstance(list);
+        mainFragment= new MainFragment().getInstance(list);
         //将内容替换到MainFragment
         fragmentTransaction.replace(R.id.fragment_main,mainFragment);
         fragmentTransaction.commit();
