@@ -11,8 +11,8 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.xxxy.no2.yulidressing.Adapter.MyselfAdapter;
-import com.xxxy.no2.yulidressing.Adapter.PostAdapter;
+
+import com.xxxy.no2.yulidressing.adapter.PostAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -6,10 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.xxxy.no2.yulidressing.Adapter.PersonalAdapter;
-import com.xxxy.no2.yulidressing.Adapter.PersonalAdapter2;
-import com.xxxy.no2.yulidressing.Adapter.PersonalAdapter3;
-import com.xxxy.no2.yulidressing.Adapter.PersonalAdapter4;
+import com.xxxy.no2.yulidressing.adapter.PersonalAdapter;
+import com.xxxy.no2.yulidressing.adapter.PersonalAdapter2;
+import com.xxxy.no2.yulidressing.adapter.PersonalAdapter3;
+import com.xxxy.no2.yulidressing.adapter.PersonalAdapter4;
+import com.xxxy.no2.yulidressing.utils.Constant;
+import com.xxxy.no2.yulidressing.utils.SharedPreferencesUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,13 +39,23 @@ public class PersonalActivity extends AppCompatActivity {
     };
     RecyclerView hat;
 
+    SharedPreferencesUtils sharedPreferencesUtils=new SharedPreferencesUtils();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
         init();
+        request_img1();
+
     }
+
+    private void request_img1() {
+      sharedPreferencesUtils.getUser(PersonalActivity.this).get("users_id");
+        String strURL = Constant.WEB_SITE+"/";
+
+    }
+
     private  void init(){
 
 
@@ -57,8 +69,6 @@ public class PersonalActivity extends AppCompatActivity {
         //3.设置适配器
         coat.setAdapter(adapter);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-
-
         trousers=findViewById(R.id.rv_trousers);
         //2.建立适配器
         PersonalAdapter2 adapter2=new PersonalAdapter2(getData2(),this);

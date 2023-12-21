@@ -51,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"
-            android:background="@color/white"></LinearLayout>
+            android:background="@android:color/transparent"
+            ></LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -67,6 +68,9 @@
             android:id="@+id/lv_showitem"
             android:layout_width="410dp"
             android:layout_height="470dp"
+            android:dividerHeight="10dp"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
             android:scaleType="fitStart"></ListView>
 
     </androidx.cardview.widget.CardView>
