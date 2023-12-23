@@ -44,7 +44,7 @@ public class MorepagesActivity extends AppCompatActivity {
         btn_main_diy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MorepagesActivity.this, UserDiyActivity.class);
+                Intent intent = new Intent(MorepagesActivity.this, FashionCirclesActivity.class);
                 startActivity(intent);
             }
         });

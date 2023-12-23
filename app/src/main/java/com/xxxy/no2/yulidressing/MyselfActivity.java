@@ -62,7 +62,6 @@ public class MyselfActivity extends AppCompatActivity {
             map.put("itemLike",likes_myself_like[i]);
             myList.add(map);
         }
-
         return myList;
     }
 

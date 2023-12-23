@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -45,6 +46,14 @@ public class PostActivity extends AppCompatActivity {
             }
         });
 
+        //返回上一个页面
+        ImageView post_iv_bankButton = findViewById(R.id.post_iv_bankButton);
+        post_iv_bankButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private  void init(){

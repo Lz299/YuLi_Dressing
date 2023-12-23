@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_3_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        ></ImageView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/image_3_1"
+        android:layout_marginLeft="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不吃咸鱼蛋糕"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView_3_2"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:text="这个品牌很有创意，款式新颖，价格亲民。夏天就是要张扬耀眼，快去剁手吧!"></TextView>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/linearLayout_3_1"
+        >
+
+        <ImageView
+            android:id="@+id/image_3_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/like"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            ></ImageView>
+
+
+        <TextView
+            android:id="@+id/textView_3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:layout_below="@+id/image_3_2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

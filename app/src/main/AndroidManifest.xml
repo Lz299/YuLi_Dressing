@@ -35,6 +35,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".FashionCirclesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MorepagesActivity"
             android:exported="false" />
         <activity
@@ -56,20 +59,19 @@
         <activity
             android:name=".MyselfActivity"
             android:exported="false" />
-
         <activity
             android:name=".UserDiyActivity"
             android:exported="false" />
         <activity
             android:name=".IndexActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:launchMode="singleTask"
-            >
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

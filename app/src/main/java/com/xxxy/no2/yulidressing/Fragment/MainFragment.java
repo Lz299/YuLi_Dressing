@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -27,7 +29,8 @@ public class MainFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public MainFragment getInstance(List<Map<String,Object>> list){
+    //将传入的list参数序列化后存储到bundle中，键名为"list"。这里使用了强制类型转换(Serializable) list，以确保list可以被序列化。
+    public MainFragment getInstance(List<PostBean> list){
         MainFragment mainFragment = new MainFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("list",(Serializable) list);
@@ -48,9 +51,12 @@ public class MainFragment extends Fragment {
         View view = inflater.inflate(R.layout.community_main_layout, container, false);
         rv_community = view.findViewById(R.id.rv_community);
         if(getArguments() != null){
-            List<Map<String,Object>> list = (List<Map<String,Object>>) getArguments().
+            List<PostBean> list = ( List<PostBean>) getArguments().
                     getSerializable("list");
-            MainAdapter adapter = new MainAdapter(list,getActivity());
+            rv_community.setLayoutManager(new LinearLayoutManager(getContext()));
+            //这里绑定adapter
+            MainAdapter adapter = new MainAdapter(getActivity(),list);
+            rv_community.setLayoutManager(new GridLayoutManager(getActivity(),2));
             rv_community.setAdapter(adapter);
         }
         return view;

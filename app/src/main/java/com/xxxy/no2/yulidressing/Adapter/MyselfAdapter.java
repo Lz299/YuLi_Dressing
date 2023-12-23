@@ -32,7 +32,6 @@ public class MyselfAdapter extends RecyclerView.Adapter<ViewHolder> {
 
         View view = mInflater.inflate(R.layout.showitem, parent, false);//物理托盘和逻辑托盘对应
         ViewHolder holder = new ViewHolder(view);
-
         return holder;
     }
 

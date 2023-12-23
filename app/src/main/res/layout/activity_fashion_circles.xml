@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bank1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/textview_1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时尚圈"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            ></TextView>
+
+
+        <RelativeLayout
+            android:id="@+id/linearLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textview_1_1"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_pager"
+
+                />
+
+
+            <TextView
+                android:id="@+id/textView_3_4"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日搭配分享今日搭配分享日搭配分享今日搭配分日搭配分享今日搭配分享"
+                android:layout_below="@+id/view_pager"
+                android:textSize="23dp"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/textView_3_5"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这个品牌很有创意，款式新颖"
+                android:layout_below="@+id/textView_3_4"
+                android:textSize="15dp"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/textView_3_6"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这个品牌很有创意，款式新颖，价格亲民。夏天就是要张扬耀眼，快去剁手吧!"
+                android:layout_below="@+id/textView_3_5"
+                android:textSize="15dp"
+                ></TextView>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/touxiang"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/linearLayout_1"
+            ></ImageView>
+
+        <EditText
+            android:id="@+id/editText_1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="请输入"
+            android:layout_toRightOf="@+id/image_2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:padding="14dp"
+            android:layout_below="@+id/linearLayout_1"
+            android:background="@drawable/comment"
+            android:layout_marginRight="10dp"
+            android:textSize="14dp"
+            android:inputType="none"
+            android:drawableRight="@drawable/add"
+            ></EditText>
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/smile" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_1"
+            android:layout_width="match_parent"
+            android:layout_height="710dp"
+            android:layout_below="@id/editText_1"
+            android:layout_marginTop="20dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout_1"
+            android:layout_marginTop="30dp"
+            >
+
+
+
+            <EditText
+                android:id="@+id/editText_2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:hint="评论区"
+                android:textSize="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/image_3"
+                android:padding="14dp"
+                android:background="@drawable/comment"
+                android:layout_marginBottom="10dp"
+                android:drawableRight="@drawable/add"
+
+                ></EditText>
+
+
+
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:src="@drawable/send2"
+                android:background="@drawable/send"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                ></ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

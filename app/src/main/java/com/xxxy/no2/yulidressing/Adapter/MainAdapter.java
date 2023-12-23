@@ -10,17 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.xxxy.no2.yulidressing.Info.PostBean;
 import com.xxxy.no2.yulidressing.R;
 
 import java.util.List;
 import java.util.Map;
 
 public class MainAdapter extends RecyclerView.Adapter<MainViewHolder>{
-    private List<Map<String,Object>> myList;
+    private List<PostBean> myList;
     private Context mContext;
     private LayoutInflater mInflater;
 
-    public MainAdapter(List<Map<String,Object>> mylist, Context mContext){
+    public MainAdapter(Context mContext,List<PostBean> mylist){
         this.myList = mylist;
         this.mContext = mContext;
         mInflater = LayoutInflater.from(mContext);
@@ -39,12 +40,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
         //盘子里东西
-        Map<String, Object> map = myList.get(position);
-        holder.itemShowImg.setImageResource((int) map.get("itemImg"));
-        holder.itemtitle.setText(map.get("itemTitle").toString());
-        holder.itemShowtx.setImageResource((int) map.get("itemTouxiang"));
-        holder.itemname.setText(map.get("itemName").toString());
-        holder.itemlike.setText(map.get("itemLike").toString());
+        PostBean  data = myList.get(position);
+        holder.itemShowImg.setImageResource(data.getPost_img());
+        holder.itemtitle.setText(data.getPost_title());
+        holder.itemShowtx.setImageResource(data.getPost_touximg());
+        holder.itemname.setText(data.getPost_username());
+        holder.itemlike.setText(data.getPost_like());
 
     }
 
@@ -63,6 +64,5 @@ class MainViewHolder extends RecyclerView.ViewHolder{
         itemShowtx = itemView.findViewById(R.id.show_iv_touxiang);
         itemname = itemView.findViewById(R.id.show_tv_name);
         itemlike = itemView.findViewById(R.id.show_like);
-
     }
 }

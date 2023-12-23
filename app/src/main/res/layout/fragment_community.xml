@@ -51,6 +51,7 @@
         android:name="com.xxxy.no2.yulidressing.Fragment.TopFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
         tools:layout="@layout/community_top_layout"></fragment>
 
 
@@ -58,7 +59,7 @@
         android:id="@+id/fragment_main"
         android:name="com.xxxy.no2.yulidressing.Fragment.MainFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="360dp"
         tools:layout="@layout/community_main_layout"></fragment>
 
 </LinearLayout>
