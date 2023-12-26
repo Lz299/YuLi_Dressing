@@ -36,7 +36,6 @@ public class IndexFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_index, container, false);
 
-
         //显示主页的穿搭搭配模块
         showlistview = view.findViewById(R.id.lv_showitem);
         simpleAdapter = new SimpleAdapter(getContext(),getData(),R.layout.indexitem,

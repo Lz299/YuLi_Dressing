@@ -93,7 +93,6 @@ public class CommunityFragment extends Fragment {
         init();
         clickEvent();
 
-
         return view;
     }
 

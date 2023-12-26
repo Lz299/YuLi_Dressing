@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +57,7 @@ public class MainFragment extends Fragment {
             rv_community.setLayoutManager(new LinearLayoutManager(getContext()));
             //这里绑定adapter
             MainAdapter adapter = new MainAdapter(getActivity(),list);
-            rv_community.setLayoutManager(new GridLayoutManager(getActivity(),2));
+            rv_community.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
             rv_community.setAdapter(adapter);
         }
         return view;

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
 import android.view.View;
@@ -48,7 +49,7 @@ public class MyselfActivity extends AppCompatActivity {
         //2.建立适配器
         MyselfAdapter adapter = new MyselfAdapter(getData(),this);
         LinearLayoutManager layoutManager =  new LinearLayoutManager(this);
-        show_RecyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        show_RecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         show_RecyclerView.setAdapter(adapter);
     }
     private List<Map<String,Object>> getData(){

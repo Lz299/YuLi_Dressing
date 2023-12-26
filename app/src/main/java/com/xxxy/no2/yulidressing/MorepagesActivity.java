@@ -37,14 +37,15 @@ public class MorepagesActivity extends AppCompatActivity {
         btn_main_uploadImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+//                Intent intent = new Intent(MorepagesActivity.this, FashionCirclesActivity.class);
+//                startActivity(intent);
             }
         });
 
         btn_main_diy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MorepagesActivity.this, FashionCirclesActivity.class);
+                Intent intent = new Intent(MorepagesActivity.this, UserDiyActivity.class);
                 startActivity(intent);
             }
         });
@@ -72,8 +73,6 @@ public class MorepagesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
     public void onButtonClick(View view) {
         RelativeLayout relativeLayout = (RelativeLayout) view;

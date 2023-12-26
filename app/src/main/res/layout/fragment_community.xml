@@ -1,65 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/commbj"
-    tools:context=".Fragment.CommunityFragment"
-    android:orientation="vertical">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:text="AI小搭"
-                android:textColor="#4C2B6E"
-                android:textSize="15dp"></TextView>
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:text="发现"
-                android:textColor="@color/white"
-                android:textSize="18dp"></TextView>
-        </LinearLayout>
-    </RelativeLayout>
+    android:layout_height="wrap_content"
+   >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp"></LinearLayout>
-
-    <com.youth.banner.Banner
-        android:id="@+id/banner_lunbo"
-        android:layout_width="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="130dp"
-        ></com.youth.banner.Banner>
-
-    <fragment
-        android:id="@+id/fragment_top"
-        android:name="com.xxxy.no2.yulidressing.Fragment.TopFragment"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-30dp"
-        tools:layout="@layout/community_top_layout"></fragment>
+        android:background="@drawable/commbj"
+        tools:context=".Fragment.CommunityFragment"
+        android:orientation="vertical"
+       >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="AI小搭"
+                    android:textColor="#4C2B6E"
+                    android:textSize="15dp"></TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="发现"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"></TextView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/commmode"
+            android:layout_height="140dp"></LinearLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_lunbo"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="130dp"
+            ></com.youth.banner.Banner>
+
+        <fragment
+            android:id="@+id/fragment_top"
+            android:name="com.xxxy.no2.yulidressing.Fragment.TopFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-30dp"
+            tools:layout="@layout/community_top_layout"></fragment>
 
 
-    <fragment
-        android:id="@+id/fragment_main"
-        android:name="com.xxxy.no2.yulidressing.Fragment.MainFragment"
-        android:layout_width="match_parent"
-        android:layout_height="360dp"
-        tools:layout="@layout/community_main_layout"></fragment>
+        <fragment
+            android:id="@+id/fragment_main"
+            android:name="com.xxxy.no2.yulidressing.Fragment.MainFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/community_main_layout"></fragment>
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

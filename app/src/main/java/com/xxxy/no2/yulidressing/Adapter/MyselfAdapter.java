@@ -1,15 +1,20 @@
 package com.xxxy.no2.yulidressing.Adapter;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.xxxy.no2.yulidressing.FashionCirclesActivity;
 import com.xxxy.no2.yulidressing.R;
 
 import java.util.List;
@@ -44,6 +49,16 @@ public class MyselfAdapter extends RecyclerView.Adapter<ViewHolder> {
         holder.itemShowtx.setImageResource((int) map.get("itemTouxiang"));
         holder.itemname.setText(map.get("itemName").toString());
         holder.itemlike.setText(map.get("itemLike").toString());
+
+
+        //点击个人Item跳转倒FashionActivity展示帖子
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext,FashionCirclesActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -56,7 +71,6 @@ public class MyselfAdapter extends RecyclerView.Adapter<ViewHolder> {
 
 class ViewHolder extends RecyclerView.ViewHolder{
     ImageView itemShowImg,itemShowtx;
-
     TextView itemtitle,itemname,itemlike;
 
     public ViewHolder(@NonNull View itemView) {

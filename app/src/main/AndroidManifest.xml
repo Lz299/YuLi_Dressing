@@ -35,6 +35,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".GiveActivity"
+            android:exported="false" />
+        <activity
             android:name=".FashionCirclesActivity"
             android:exported="false" />
         <activity

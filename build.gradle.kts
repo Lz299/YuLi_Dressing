@@ -6,7 +6,9 @@ allprojects {
     repositories {
 
         //build.gradle 的Project下导入
-        maven { url= uri("https://jitpack.io") }
+        maven { url= uri("https://jitpack.io")
+
+        }
     }
 }
 
