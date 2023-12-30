@@ -27,7 +27,7 @@ public class PersonalActivity extends AppCompatActivity {
     RecyclerView coat;
 
     //trousers
-    int[] images2=new int[]{R.drawable.kou_c1,R.drawable.kou_c2,R.drawable.kou_c3,R.drawable.kou_c4,R.drawable.kou_c5
+    int[] images2=new int[]{R.drawable.kou_k1,R.drawable.kou_k2,R.drawable.kou_k3,R.drawable.kou_k4
     };
     RecyclerView trousers;
 
@@ -58,8 +58,6 @@ public class PersonalActivity extends AppCompatActivity {
 
     }
     private  void init(){
-
-
         //coat
 
         coat=findViewById(R.id.rv_coat);
@@ -100,8 +98,6 @@ public class PersonalActivity extends AppCompatActivity {
         //3.设置适配器
         hat.setAdapter(adapter4);
         layoutManager4.setOrientation(LinearLayoutManager.HORIZONTAL);
-
-
 
     }
     //1.建立数据源第二步

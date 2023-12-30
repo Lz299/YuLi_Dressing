@@ -1,8 +1,10 @@
 package com.xxxy.no2.yulidressing.Fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -16,13 +18,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.xxxy.no2.yulidressing.Adapter.MainAdapter;
+import com.xxxy.no2.yulidressing.GiveActivity;
 import com.xxxy.no2.yulidressing.Info.BannerDataInfo;
 import com.xxxy.no2.yulidressing.Info.PostBean;
+import com.xxxy.no2.yulidressing.LoginActivity;
+import com.xxxy.no2.yulidressing.MainActivity;
+import com.xxxy.no2.yulidressing.MorepagesActivity;
 import com.xxxy.no2.yulidressing.R;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerImageAdapter;
 import com.youth.banner.holder.BannerImageHolder;
 import com.youth.banner.indicator.CircleIndicator;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -77,16 +84,39 @@ public class CommunityFragment extends Fragment {
         banner = view.findViewById(R.id.banner_lunbo);
             //模拟数据
         mBannerDataInfo.add(new BannerDataInfo(R.drawable.lunbo1,"标题一"));
-        mBannerDataInfo.add(new BannerDataInfo(R.drawable.lunbo2,"标题二"));
-        mBannerDataInfo.add(new BannerDataInfo(R.drawable.lunbo3,"标题三"));
+        mBannerDataInfo.add(new BannerDataInfo(R.drawable.lubojuanzeng,"标题二"));
+        mBannerDataInfo.add(new BannerDataInfo(R.drawable.lunbo2,"标题三"));
+        mBannerDataInfo.add(new BannerDataInfo(R.drawable.lunbo3,"标题四"));
+
+//        banner.setBannerGalleryEffect(1,1,3);
+
+        //banner的监听判断当前的item
+
+
+
+        //banner的绑定
         banner.setAdapter(new BannerImageAdapter<BannerDataInfo>(mBannerDataInfo) {
             @Override
             public void onBindView(BannerImageHolder holder, BannerDataInfo data, int position, int size) {
                 holder.imageView.setImageResource(data.getImg());
+
             }
         })
                 .addBannerLifecycleObserver(this)
                 .setIndicator(new CircleIndicator(getContext()));
+
+        banner.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(Object data, int position) {
+
+                if (position==1){
+                    Intent intent = new Intent(getActivity(), GiveActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+
 
         //**标签栏Fragment事件
         setData();
